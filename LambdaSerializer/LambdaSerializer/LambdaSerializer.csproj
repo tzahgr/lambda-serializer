@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08627076-DABD-4101-A57D-1BAB40CCE460}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LambdaSerializer</RootNamespace>
+    <AssemblyName>LambdaSerializer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\BinaryExpressionDto.cs" />
+    <Compile Include="DTOs\BlockExpressionDto.cs" />
+    <Compile Include="DTOs\CatchBlockDto.cs" />
+    <Compile Include="DTOs\ConditionalExpressionDto.cs" />
+    <Compile Include="DTOs\ConstantExpressionDto.cs" />
+    <Compile Include="DTOs\DebugInfoExpressionDto.cs" />
+    <Compile Include="DTOs\DefaultExpressionDto.cs" />
+    <Compile Include="DTOs\DynamicExpressionDto.cs" />
+    <Compile Include="DTOs\ElementInitDto.cs" />
+    <Compile Include="DTOs\ExpressionDto.cs" />
+    <Compile Include="DTOs\GotoExpressionDto.cs" />
+    <Compile Include="DTOs\IndexExpressionDto.cs" />
+    <Compile Include="DTOs\InvocationExpressionDto.cs" />
+    <Compile Include="DTOs\LabelExpressionDto.cs" />
+    <Compile Include="DTOs\LabelTargetDto.cs" />
+    <Compile Include="DTOs\LambdaExpressionDto.cs" />
+    <Compile Include="DTOs\ListInitExpressionDto.cs" />
+    <Compile Include="DTOs\LoopExpressionDto.cs" />
+    <Compile Include="DTOs\MemberAssignmentDto.cs" />
+    <Compile Include="DTOs\MemberBindingDto.cs" />
+    <Compile Include="DTOs\MemberExpressionDto.cs" />
+    <Compile Include="DTOs\MemberInitExpressionDto.cs" />
+    <Compile Include="DTOs\MemberListBindingDto.cs" />
+    <Compile Include="DTOs\MethodCallExpressionDto.cs" />
+    <Compile Include="DTOs\NewArrayExpressionDto.cs" />
+    <Compile Include="DTOs\NewExpressionDto.cs" />
+    <Compile Include="DTOs\ParameterExpressionDto.cs" />
+    <Compile Include="DTOs\RuntimeVariablesExpressionDto.cs" />
+    <Compile Include="DTOs\SwitchCaseDto.cs" />
+    <Compile Include="DTOs\SwitchExpressionDto.cs" />
+    <Compile Include="DTOs\TryExpressionDto.cs" />
+    <Compile Include="DTOs\TypeBinaryExpressionDto.cs" />
+    <Compile Include="DTOs\UnaryExpressionDto.cs" />
+    <Compile Include="ExpressionDeserializer.cs" />
+    <Compile Include="ExpressionDispatcher.cs" />
+    <Compile Include="ExpressionDtoDispatcher.cs" />
+    <Compile Include="ExpressionSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
