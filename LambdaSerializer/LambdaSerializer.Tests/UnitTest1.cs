@@ -12,7 +12,7 @@ namespace LambdaSerializer.Tests
         public void TestMethod1()
         {
             Expression<Func<string, bool>> exp = s => s.Contains("a");
-
+            //aa
             var p1 = ((MethodCallExpression)exp.Body).Object;
 
             var gsdfgdsf = ReferenceEquals(exp.Parameters[0], p1);
