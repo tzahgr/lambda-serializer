@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+ 
 namespace LambdaSerializer.Tests
 {
     [TestClass]
